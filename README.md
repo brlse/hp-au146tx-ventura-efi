@@ -1,11 +1,12 @@
-# HP-au146tx-Hackkintosh
+# HP-au146tx-Hackintosh
 This is an OPENCORE efi spacifically for HP Pavilion au146tx to boot into macOS ventura.
 
 ## Warning
 1. This efi is strictly for ventura only, for now.
-2. Since I had remove the battery off from my HP laptop, I haven't install the SMCBatteryManager.kext. Add into both folders and plist if needed.
-3. Generate a S/N, MLB and UUID yourself.
-4. Didn't map USB port, used USBInjectAll.kext instead and worked just fine for me. 
+Want Sequoia? See [here](https://github.com/brlse/hp-au146tx-sequoia-efi)!
+2. Since I had remove the battery off from my laptop, I haven't install the SMCBatteryManager.kext. Add into both folders and plist if needed.
+3. Generate a set of S/N, MLB and UUID yourself.
+4. You might need to build your own USBMap kext.
 5. Deploy at your own risk!
 
 ## Specsheet
@@ -18,13 +19,12 @@ This is an OPENCORE efi spacifically for HP Pavilion au146tx to boot into macOS 
 - Standard PS/2 Keyboard
 
 ## What won't work
-- Well, dGPU NV GTX 940MX of course.
-- Airdrop, as the Wi-Fi card vendor is intel.
-- The amazing chime at startup, no matter what I did.
-- Despite edited in DP, almost all of PCIe still unknown in system info app. (work fine)
-- A tray-icon if you active the SDXC reader, can be closed manually though.
+- dGPU NV GTX 940MX
+- Airdrop, as the Wi-Fi vendor is intel
+- The amazing chime at startup
+- A tray-icon of the SDXC reader, can be closed manually though.
 
 ## Credits
 - dortania.github.io
 - github.com/acidanthera
-- youtube.com/elitemacx86
+- elitemacx86
